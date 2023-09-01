@@ -8,6 +8,7 @@
 #include "unitree_guide/publish_turning.h"
 #include "common/mathTypes.h"
 #include "unitree_guide/publish_rise.h"
+
 class Pub
 {
 private:
@@ -35,6 +36,8 @@ public:
     void pub_data_turning(Vec3 q, Vec3 q_d, Vec3 w, Vec3 w_d, Vec3 err_q, Vec3 err_w, Vec3 disturbance, Vec3 dkexi, Vec3 U);
     // 发布位置误差，速度误差，复合误差e2，e2（0），积分项，miu_t的值，sgn的取值，miu_T/9.81;
     void pub_data_rise(Vec3 posError,Vec3 velError,Vec3 Error2,Vec3 Error2_0,Vec3 intergral,Vec3 miu_t,Vec3 templesgn,Vec3 templemiu);
+    //回调函数
+    
 
 
 };

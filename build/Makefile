@@ -1689,6 +1689,19 @@ junior_ctrl/fast:
 .PHONY : junior_ctrl/fast
 
 #=============================================================================
+# Target rules for targets named unitree_guide_gencfg
+
+# Build rule for target.
+unitree_guide_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide_gencfg
+.PHONY : unitree_guide_gencfg
+
+# fast build rule for target.
+unitree_guide_gencfg/fast:
+	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build
+.PHONY : unitree_guide_gencfg/fast
+
+#=============================================================================
 # Target rules for targets named unitree_guide_gennodejs
 
 # Build rule for target.
@@ -2117,6 +2130,7 @@ help:
 	@echo "... unitree_guide_generate_messages_cpp"
 	@echo "... unitree_guide_generate_messages_eus"
 	@echo "... junior_ctrl"
+	@echo "... unitree_guide_gencfg"
 	@echo "... unitree_guide_gennodejs"
 	@echo "... unitree_guide_gencpp"
 	@echo "... unitree_guide_geneus"

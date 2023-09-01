@@ -10,6 +10,8 @@
 #include "control/CtrlComponents.h"
 #include "Gait/WaveGenerator.h"
 #include "control/BalanceCtrl.h"
+#include<dynamic_reconfigure/server.h>
+#include<unitree_guide/riseConfig.h>
 
 #ifdef COMPILE_WITH_REAL_ROBOT
 #include "interface/IOSDK.h"
@@ -40,6 +42,8 @@ void setProcessScheduler()
     }
 }
 
+
+
 int main(int argc, char **argv)
 {
     /* set real-time process */
@@ -47,6 +51,13 @@ int main(int argc, char **argv)
     /* set the print format */
     std::cout << std::fixed << std::setprecision(3);
 
+
+    //***********************
+
+
+    //***********************
+
+    
 #ifdef RUN_ROS
     ros::init(argc, argv, "unitree_gazebo_servo");
 #endif // RUN_ROS

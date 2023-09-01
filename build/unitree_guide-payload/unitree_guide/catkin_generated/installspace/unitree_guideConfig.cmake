@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(unitree_guide_EXPORTED_TARGETS "unitree_guide_generate_messages_cpp;unitree_guide_generate_messages_eus;unitree_guide_generate_messages_lisp;unitree_guide_generate_messages_nodejs;unitree_guide_generate_messages_py")
+set(unitree_guide_EXPORTED_TARGETS "unitree_guide_generate_messages_cpp;unitree_guide_generate_messages_eus;unitree_guide_generate_messages_lisp;unitree_guide_generate_messages_nodejs;unitree_guide_generate_messages_py;unitree_guide_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${unitree_guide_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${unitree_guide_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "unitree_legged_msgs;roscpp;std_msgs;message_runtime")
+set(depends "unitree_legged_msgs;roscpp;std_msgs;message_runtime;dynamic_reconfigure;rospy")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

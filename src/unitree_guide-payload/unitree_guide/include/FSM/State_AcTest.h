@@ -7,6 +7,9 @@
 #include "FSM/FSMState.h"
 #include "Gait/GaitGenerator.h"
 #include "control/BalanceCtrl.h"
+#include<dynamic_reconfigure/server.h>
+#include<unitree_guide/riseConfig.h>
+#include <ros/ros.h>
 
 class State_AcTest : public FSMState{
 public:
@@ -21,7 +24,34 @@ public:
     //******************8.28.19***************************
     //sgn函数的设计
     int sgn(double val);
-    
+
+    //void Callback(dynamic_reconfigure_test::riseConfig &config);
+   
+
+    void setK_s_value(double value){
+        K_s=value;
+    }
+    void set_beita_value(double value){
+        _beita=value;
+    }
+    void setalphe1_value(double value){
+        alphe1=value;
+    }
+    void setalphe2_value(double value){
+        alphe2=value;
+    }
+        double setK_s_value()const{
+        return K_s;
+    }
+    double set_beita_value()const{
+        return _beita;
+    }
+    double setalphe1_value()const{
+        return alphe1;
+    }
+    double setalphe2_value()const{
+        return alphe2;
+    }
     
     //******************8.28.19***************************
 private:
@@ -126,6 +156,11 @@ private:
     double beita;
     Vec3 templesgn;
     double outputmass;
+
+    double param_1;
+    double param_2;
+    double param_3;
+    double param_4;
 //******************8.28.19***************************
 
     int _num;
@@ -139,6 +174,9 @@ private:
     // Calculate average value
     AvgCov *_avg_posError = new AvgCov(3, "_posError", true, 1000, 1000, 1);
     AvgCov *_avg_angError = new AvgCov(3, "_angError", true, 1000, 1000, 1000);
+
+
 };
+
 
 #endif  // ACTEST_H

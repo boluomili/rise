@@ -533,6 +533,7 @@ junior_ctrl_EXTERNAL_OBJECTS =
 /home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /opt/ros/noetic/lib/librosconsole_backend_interface.so
 /home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /opt/ros/noetic/lib/librostime.so
 /home/zsl/adaptive_ws/devel/lib/unitree_guide/junior_ctrl: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0

@@ -69,6 +69,9 @@ if(CATKIN_MAKE)
         geometry_msgs
         unitree_legged_msgs
         message_generation
+        dynamic_reconfigure
+        rospy
+        
     )
     add_message_files( # 自定义发布消息类型
         FILES
@@ -79,6 +82,10 @@ if(CATKIN_MAKE)
     generate_messages(  # generate_messages 生成自定义消息代码，并在其中包含了所依赖的消息类型（std_msgs）
         DEPENDENCIES
         std_msgs
+        
+    )
+    generate_dynamic_reconfigure_options(
+        cfg/rise.cfg
     )
     catkin_package(
         CATKIN_DEPENDS 
@@ -86,9 +93,16 @@ if(CATKIN_MAKE)
         roscpp 
         std_msgs 
         message_runtime    # 依赖项
+        dynamic_reconfigure
+        rospy
     )
 
+    
+
 endif()
+
+
+
 
 include_directories(
     include
@@ -159,3 +173,4 @@ target_link_libraries(junior_ctrl -pthread lcm)
 if(NOT CATKIN_MAKE)
     set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 endif()
+

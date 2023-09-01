@@ -194,6 +194,7 @@ unitree_guide-payload/unitree_actuator_sdk/unitree_motor_ctrl/clean: unitree_gui
 
 # Recursive "all" directory target.
 unitree_guide-payload/unitree_guide/all: unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all
+unitree_guide-payload/unitree_guide/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/all
 unitree_guide-payload/unitree_guide/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages.dir/all
 
 .PHONY : unitree_guide-payload/unitree_guide/all
@@ -209,6 +210,7 @@ unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/C
 unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/clean
 unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_eus.dir/clean
 unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/clean
+unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/clean
 unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/clean
 unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencpp.dir/clean
 unitree_guide-payload/unitree_guide/clean: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_geneus.dir/clean
@@ -2706,12 +2708,12 @@ unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps
 unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/all: unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_gencpp.dir/all
 	$(MAKE) -f unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/build.make unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/depend
 	$(MAKE) -f unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/build.make unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=48,49 "Built target unitree_legged_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=49 "Built target unitree_legged_control"
 .PHONY : unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/all
 
 # Build rule for subdir invocation for target.
 unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
 .PHONY : unitree_ros/unitree_legged_control/CMakeFiles/unitree_legged_control.dir/rule
@@ -3681,7 +3683,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_p
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/_unitree_guide_generate_messages_check_deps_publish_rise.dir/all
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/depend
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=45,46,47 "Built target unitree_guide_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=46,47,48 "Built target unitree_guide_generate_messages_py"
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3711,12 +3713,12 @@ unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_c
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/_unitree_guide_generate_messages_check_deps_publish_rise.dir/all
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/depend
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=35,36,37 "Built target unitree_guide_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=36,37 "Built target unitree_guide_generate_messages_cpp"
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/rule
@@ -3815,9 +3817,16 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_legg
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_generate_messages_lisp.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_generate_messages_eus.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_generate_messages_cpp.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_py.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_cpp.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_eus.dir/all
+unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_lisp.dir/all
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/all
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/depend
@@ -3827,7 +3836,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all: unitree_guid
 
 # Build rule for subdir invocation for target.
 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 78
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 79
 	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/rule
@@ -3843,6 +3852,33 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/clean:
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/clean
 
 #=============================================================================
+# Target rules for target unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir
+
+# All Build rule for target.
+unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/all:
+	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/depend
+	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=35 "Built target unitree_guide_gencfg"
+.PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/all
+
+# Build rule for subdir invocation for target.
+unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
+.PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule
+
+# Convenience name for target.
+unitree_guide_gencfg: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule
+
+.PHONY : unitree_guide_gencfg
+
+# clean rule for target.
+unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/clean:
+	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/clean
+.PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/clean
+
+#=============================================================================
 # Target rules for target unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir
 
 # All Build rule for target.
@@ -3854,7 +3890,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/all: 
 
 # Build rule for subdir invocation for target.
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/rule
@@ -3881,7 +3917,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencpp.dir/all: uni
 
 # Build rule for subdir invocation for target.
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencpp.dir/rule
@@ -4102,12 +4138,12 @@ unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_n
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/all: unitree_guide-payload/unitree_guide/CMakeFiles/_unitree_guide_generate_messages_check_deps_publish_rise.dir/all
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/depend
 	$(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=43,44 "Built target unitree_guide_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=43,44,45 "Built target unitree_guide_generate_messages_nodejs"
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zsl/adaptive_ws/build/CMakeFiles 0
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_generate_messages_nodejs.dir/rule

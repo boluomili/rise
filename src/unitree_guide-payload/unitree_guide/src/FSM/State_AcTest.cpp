@@ -3,6 +3,8 @@
 ***********************************************************************/
 #include "FSM/State_AcTest.h"
 #include <iomanip>
+#include<dynamic_reconfigure/server.h>
+#include<unitree_guide/riseConfig.h>
 
 State_AcTest::State_AcTest(CtrlComponents *ctrlComp)
              :FSMState(ctrlComp, FSMStateName::ACTEST, "acTest"), 
@@ -70,6 +72,7 @@ State_AcTest::~State_AcTest(){
     delete _gait;
 }
 
+
 void State_AcTest::enter(){
     FILE *input1;
     input1 = fopen("AC_DOB.txt","w");   //write写入
@@ -87,25 +90,44 @@ void State_AcTest::enter(){
 
     _d_mb = 0;          //这是什么
     _mb = 0;
+
+
     //***********8.29***************
     K_s=1;
     _beita=50;
     alphe1=50;
     alphe2=20;
-        //***********8.29***************
+    //     extern dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig> server;
+    // //定义回调函数
+    // extern dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig>::CallbackType f;
+    // f = boost::bind(&Callback,_1);
+    // server.setCallback(f);
+
+
+    //***********8.29***************
+
+
     _Loading.setZero();     //这是什么
 
     _Tu.setZero();
     _E.setIdentity();
     _U.setZero();
     _kexi.setZero();
+
+
 //***********8.29***************
     miu_t.setZero();
     integral.setZero();
     _error2_0.setZero();
+
 //***********8.29***************
+
+
     _num = 0;
     _firstRun = true;
+
+
+    
 
 }
 
@@ -139,6 +161,10 @@ void State_AcTest::run(){
     _G2B_RotMat = _B2G_RotMat.transpose();
     _yaw = _lowState->getYaw();
     _dYaw = _lowState->getDYaw();
+
+        //将回调函数和服务端绑定，当客户端请求修改参数时，服务器跳转到回调函数进行处理
+
+
 
     // std::cout<< "机身姿态矩阵 = " << _B2G_RotMat <<std::endl; 
     // std::cout<< "世界转机身旋转矩阵 = " << _G2B_RotMat <<std::endl; 
@@ -360,6 +386,7 @@ void State_AcTest::calcTau(){
     
     std::cout<<"估计质量为miu_t= "<< (miu_t/9.81).transpose()<<std::endl;
     std::cout<<"临时sgn的值= "<<templesgn.transpose()<<std::endl;
+    std::cout<<"K_s,beita,alphe1,alphe2的值: "<<K_s<<"**"<<_beita<<"**"<<alphe1<<"**"<<alphe2<<"**"<<std::endl;
     }
     count_1++;
     //***********8.29***************
@@ -441,7 +468,7 @@ void State_AcTest::calcTau(){
         fprintf(input1,"%f %f %f %f %f %f %f %f %f\n",_mb,_posBody(2),_pcd(2),_velBody(0),_vCmdGlobal(0), _velBody(1),_vCmdGlobal(1),_dYawCmd,_lowState->getGyroGlobal()(2));
         fclose(input1);
     }
-
+ 
     count++ ; 
     
 
@@ -467,3 +494,9 @@ void State_AcTest::calcQQd(){
     _qdGoal = vec12ToVec34(_robModel->getQd(_posFeet2B, _velFeet2BGoal, FrameType::BODY));
 }
 
+
+
+// gen.add("K_s", double_t, 0, "K_s_param", 0.0,  0, 500)
+// gen.add("beita", double_t, 0, "beita_param", 0.0,  0, 500)
+// gen.add("alphe1", double_t, 0, "alphe1_param", 0.0,  0, 500)
+// gen.add("alphe2", double_t, 0, "alphe2_param", 0.0,  0, 500)

@@ -34,7 +34,7 @@ struct publish_movement_
     , a_d()
     , sumfootforce(0.0)
     , d_mp(0.0)  {
-      p.assign(0.0);  //将vec3的三个分量都设置为0.0；
+      p.assign(0.0);
 
       p_d.assign(0.0);
 

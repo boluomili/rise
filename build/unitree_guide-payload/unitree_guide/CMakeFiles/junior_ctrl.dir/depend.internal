@@ -5,6 +5,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/FSM/FSM.cpp.o
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_movement.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_rise.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_turning.h
+ /home/zsl/adaptive_ws/devel/include/unitree_guide/riseConfig.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/FSM.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/FSMState.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/State_AcTest.h
@@ -41,6 +42,21 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/FSM/FSM.cpp.o
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/Array.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/QuadProg++.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/src/FSM/FSM.cpp
+ /opt/ros/noetic/include/dynamic_reconfigure/BoolParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Config.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ConfigDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/DoubleParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Group.h
+ /opt/ros/noetic/include/dynamic_reconfigure/GroupState.h
+ /opt/ros/noetic/include/dynamic_reconfigure/IntParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ParamDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Reconfigure.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureRequest.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureResponse.h
+ /opt/ros/noetic/include/dynamic_reconfigure/StrParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_init_mutex.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_tools.h
+ /opt/ros/noetic/include/dynamic_reconfigure/server.h
  /opt/ros/noetic/include/geometry_msgs/Point.h
  /opt/ros/noetic/include/geometry_msgs/PointStamped.h
  /opt/ros/noetic/include/geometry_msgs/Pose.h
@@ -279,6 +295,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/FSM/State_AcT
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_movement.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_rise.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_turning.h
+ /home/zsl/adaptive_ws/devel/include/unitree_guide/riseConfig.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/FSMState.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/State_AcTest.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/Gait/FeetEndCal.h
@@ -306,6 +323,21 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/FSM/State_AcT
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/Array.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/QuadProg++.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/src/FSM/State_AcTest.cpp
+ /opt/ros/noetic/include/dynamic_reconfigure/BoolParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Config.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ConfigDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/DoubleParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Group.h
+ /opt/ros/noetic/include/dynamic_reconfigure/GroupState.h
+ /opt/ros/noetic/include/dynamic_reconfigure/IntParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ParamDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Reconfigure.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureRequest.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureResponse.h
+ /opt/ros/noetic/include/dynamic_reconfigure/StrParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_init_mutex.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_tools.h
+ /opt/ros/noetic/include/dynamic_reconfigure/server.h
  /opt/ros/noetic/include/geometry_msgs/Point.h
  /opt/ros/noetic/include/geometry_msgs/PointStamped.h
  /opt/ros/noetic/include/geometry_msgs/Pose.h
@@ -1797,6 +1829,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/control/Contr
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_movement.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_rise.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_turning.h
+ /home/zsl/adaptive_ws/devel/include/unitree_guide/riseConfig.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/FSM.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/FSMState.h
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/FSM/State_AcTest.h
@@ -1834,6 +1867,21 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/control/Contr
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/Array.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/QuadProg++.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/src/control/ControlFrame.cpp
+ /opt/ros/noetic/include/dynamic_reconfigure/BoolParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Config.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ConfigDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/DoubleParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Group.h
+ /opt/ros/noetic/include/dynamic_reconfigure/GroupState.h
+ /opt/ros/noetic/include/dynamic_reconfigure/IntParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ParamDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Reconfigure.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureRequest.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureResponse.h
+ /opt/ros/noetic/include/dynamic_reconfigure/StrParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_init_mutex.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_tools.h
+ /opt/ros/noetic/include/dynamic_reconfigure/server.h
  /opt/ros/noetic/include/geometry_msgs/Point.h
  /opt/ros/noetic/include/geometry_msgs/PointStamped.h
  /opt/ros/noetic/include/geometry_msgs/Pose.h
@@ -2295,6 +2343,7 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/main.cpp.o
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_movement.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_rise.h
  /home/zsl/adaptive_ws/devel/include/unitree_guide/publish_turning.h
+ /home/zsl/adaptive_ws/devel/include/unitree_guide/riseConfig.h
  /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/BmsCmd.h
  /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/BmsState.h
  /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/Cartesian.h
@@ -2343,6 +2392,21 @@ unitree_guide-payload/unitree_guide/CMakeFiles/junior_ctrl.dir/src/main.cpp.o
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/Array.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/include/thirdParty/quadProgpp/QuadProg++.hh
  /home/zsl/adaptive_ws/src/unitree_guide-payload/unitree_guide/src/main.cpp
+ /opt/ros/noetic/include/dynamic_reconfigure/BoolParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Config.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ConfigDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/DoubleParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Group.h
+ /opt/ros/noetic/include/dynamic_reconfigure/GroupState.h
+ /opt/ros/noetic/include/dynamic_reconfigure/IntParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ParamDescription.h
+ /opt/ros/noetic/include/dynamic_reconfigure/Reconfigure.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureRequest.h
+ /opt/ros/noetic/include/dynamic_reconfigure/ReconfigureResponse.h
+ /opt/ros/noetic/include/dynamic_reconfigure/StrParameter.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_init_mutex.h
+ /opt/ros/noetic/include/dynamic_reconfigure/config_tools.h
+ /opt/ros/noetic/include/dynamic_reconfigure/server.h
  /opt/ros/noetic/include/geometry_msgs/Point.h
  /opt/ros/noetic/include/geometry_msgs/PointStamped.h
  /opt/ros/noetic/include/geometry_msgs/Pose.h

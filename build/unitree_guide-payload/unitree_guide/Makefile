@@ -243,6 +243,21 @@ junior_ctrl/fast:
 .PHONY : junior_ctrl/fast
 
 # Convenience name for target.
+unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule
+.PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule
+
+# Convenience name for target.
+unitree_guide_gencfg: unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/rule
+
+.PHONY : unitree_guide_gencfg
+
+# fast build rule for target.
+unitree_guide_gencfg/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build.make unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gencfg.dir/build
+.PHONY : unitree_guide_gencfg/fast
+
+# Convenience name for target.
 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/rule:
 	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/rule
 .PHONY : unitree_guide-payload/unitree_guide/CMakeFiles/unitree_guide_gennodejs.dir/rule
@@ -1193,6 +1208,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... junior_ctrl"
+	@echo "... unitree_guide_gencfg"
 	@echo "... unitree_guide_gennodejs"
 	@echo "... unitree_guide_gencpp"
 	@echo "... unitree_guide_geneus"
