@@ -161,6 +161,7 @@ private:
     double param_2;
     double param_3;
     double param_4;
+    
 //******************8.28.19***************************
 
     int _num;

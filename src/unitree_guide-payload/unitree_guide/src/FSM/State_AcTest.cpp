@@ -109,10 +109,15 @@ void State_AcTest::enter(){
 
 
     //***********8.29***************
-    K_s=0.5;
-    _beita=20;
-    alphe1=31.5;
-    alphe2=20;
+    // K_s=100;
+    // _beita=115;
+    // alphe1=40;
+    // alphe2=30;
+    K_s=2;
+    _beita=0.5;
+    alphe1=20;
+    alphe2=5;
+
     //     extern dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig> server;
     // //定义回调函数
     // extern dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig>::CallbackType f;
@@ -135,6 +140,7 @@ void State_AcTest::enter(){
     miu_t.setZero();
     integral.setZero();
     _error2_0.setZero();
+    _error2.setZero();
 
 //***********8.29***************
 
@@ -360,7 +366,7 @@ void State_AcTest::calcTau(){
     // _num++;
     _posError = _pcd - _posBody;
     _velError = _vCmdGlobal - _velBody;
-    _error2=_velError+alphe1*_posError;
+    
     
     //ddp就是期望加速度。
     _ddPcd = _Kpp * _posError + _Kdp * _velError;
@@ -382,35 +388,7 @@ void State_AcTest::calcTau(){
     _mb = _mb + _d_mb * _ctrlComp->dt;                  //估计质量
     //***********8.29***************
     //***********8.29***************
-    static Vec3 _error2_0=_error2;
-    for ( int i(0); i<3; ++i)
-    {
-        templesgn(i)=sgn(_error2(i));
-    }
-    //***********8.29***************  
-    integral=integral+(K_s+1)*alphe2*_error2*_ctrlComp->dt+beita*templesgn*_ctrlComp->dt;
-    miu_t=(K_s+1)*_error2-(K_s+1)*_error2_0+integral;
-    int count_1=0;
-    if(count_1%100==0)
-    {
-    std::cout<<"_posError的值:= "<< _posError.transpose()<<std::endl;
-    std::cout<<"_velError的值:= "<< _velError.transpose()<<std::endl;
 
-    std::cout<<"_error2的值:= "<< _error2.transpose()<<std::endl;
-    std::cout<<"_error2_0的值:= "<< _error2_0.transpose()<<std::endl;
-    std::cout<<"integral的值:= "<< integral.transpose()<<std::endl;
-    
-    std::cout<<"估计质量为miu_t= "<< (miu_t/9.81).transpose()<<std::endl;
-    std::cout<<"临时sgn的值= "<<templesgn.transpose()<<std::endl;
-    std::cout<<"K_s,beita,alphe1,alphe2的值: "<<K_s<<"**"<<_beita<<"**"<<alphe1<<"**"<<alphe2<<"**"<<std::endl;
-
-    std::cout<<"K_s= "<<K_s<<std::endl;
-    std::cout<<"_beita= "<<_beita<<std::endl;
-    std::cout<<"alphe1 = "<<alphe1<<std::endl;
-    std::cout<<"alphe2 = "<<alphe2<<std::endl;
-    }
-    count_1++;
-    //***********8.29***************
            
     _Loading = _Ym * _mb - _KD *_S_Compound;            //估计-力
         //box可删，
@@ -430,16 +408,55 @@ void State_AcTest::calcTau(){
     // std::cout<<"_Loading = "<< _Loading.transpose() <<std::endl;
 
     //转动
-    Vec3 _rotError = - rotMatToExp(_Rd*_G2B_RotMat);
-    Vec3 _wError = _lowState->getGyroGlobal() - _wCmdGlobal;
+    Vec3 _rotError = rotMatToExp(_Rd*_G2B_RotMat);
+    Vec3 _wError = -_lowState->getGyroGlobal() + _wCmdGlobal;
     Mat3 _Ibody = Vec3(0.0792, 0.2085, 0.2265).asDiagonal();    
         //asDiagonal对角矩阵
+        
 
     _S_CompoundTu = _wError + _lamdaTu * _rotError;     //复合误差
     _Tu = _GammaTu*_Ibody*_lowState->getGyroGlobal() + _kexi;//_Tu = d
     _dkexi = -_GammaTu*(_U + _Tu);
     _kexi = _kexi + _dkexi* _ctrlComp->dt;
-    _U = -(_KDTu*_lamdaTu + _E)*_rotError-(_KDTu + _lamdaTu)*_wError-_Tu;
+    //_U = -(_KDTu*_lamdaTu + _E)*_rotError-(_KDTu + _lamdaTu)*_wError-_Tu;
+   
+
+
+        //***********8.29***************  
+        _error2=_wError+alphe1*_rotError;
+        static Vec3 _error2_0=_error2;
+    for ( int i(0); i<3; ++i)
+    {
+        templesgn(i)=sgn(_error2(i));
+    }
+
+    integral=integral+(K_s+1)*alphe2*_error2*_ctrlComp->dt+_beita*templesgn*_ctrlComp->dt;
+    miu_t=(K_s+1)*_error2-(K_s+1)*_error2_0 + integral;
+
+    _U = _Ibody*alphe1*_wError+_Ibody*alphe2*_error2+miu_t;
+
+
+    int count_1=0;
+    if(count_1%100==0)
+    {
+    std::cout<<"_dWbd的值:= "<< _dWbd.transpose()<<std::endl;
+    std::cout<<"_rotError的值:= "<< _rotError.transpose()<<std::endl;
+    std::cout<<"_wError的值:= "<< _wError.transpose()<<std::endl;
+    std::cout<<"_error2的值:= "<< _error2.transpose()<<std::endl;
+    std::cout<<"_error2_0的值:= "<< _error2_0.transpose()<<std::endl;
+    std::cout<<"integral的值:= "<< integral.transpose()<<std::endl;
+    
+    std::cout<<"估计质量为miu_t= "<< (miu_t/9.81).transpose()<<std::endl;
+    std::cout<<"临时sgn的值= "<<templesgn.transpose()<<std::endl;
+    // std::cout<<"K_s,beita,alphe1,alphe2的值: "<<K_s<<"**"<<_beita<<"**"<<alphe1<<"**"<<alphe2<<"**"<<std::endl;
+
+    // std::cout<<"K_s= "<<K_s<<std::endl;
+    // std::cout<<"_beita= "<<_beita<<std::endl;
+    // std::cout<<"alphe1 = "<<alphe1<<std::endl;
+    // std::cout<<"alphe2 = "<<alphe2<<std::endl;
+    }
+    count_1++;
+    //***********8.29***************
     
      
     
@@ -451,7 +468,7 @@ void State_AcTest::calcTau(){
     // std::cout<<"_Tu = "<< _Tu.transpose() <<std::endl;
     // std::cout<<"_U = "<< _U.transpose() <<std::endl;
 
-    _forceFeetGlobal = - _balCtrl->calF(_ddPcd, _dWbd, _B2G_RotMat, _posFeet2BGlobal, *_contact, miu_t(2)/9.81, _U);
+    _forceFeetGlobal = - _balCtrl->calF(_ddPcd, _dWbd, _B2G_RotMat, _posFeet2BGlobal, *_contact, _Loading(2), _U);
     // _forceFeetGlobal = - _balCtrl->calF(_ddPcd, _dWbd, _B2G_RotMat, _posFeet2BGlobal, *_contact, 0, Vec3(0,0,0));
     //如果是非接触状态，则计算每条腿的足端力
     outputmass=miu_t(2)/9.81;
