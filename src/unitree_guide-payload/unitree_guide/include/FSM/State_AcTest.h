@@ -28,8 +28,8 @@ public:
     //void Callback(dynamic_reconfigure_test::riseConfig &config);
    
 
-    void setK_s_value(double value){
-        K_s=value;
+    double setK_s_value(double value){
+        return value;
     }
     void set_beita_value(double value){
         _beita=value;

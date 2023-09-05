@@ -118,9 +118,9 @@ unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_generate_messages_cpp: /home/
 
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/LowState.msg
-/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/IMU.msg
-/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/Cartesian.msg
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/BmsState.msg
+/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/Cartesian.msg
+/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/IMU.msg
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/MotorState.msg
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/LowState.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from unitree_legged_msgs/LowState.msg"
@@ -136,9 +136,9 @@ unitree_legged_msgs/CMakeFiles/unitree_legged_msgs_generate_messages_cpp: /home/
 
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/HighState.msg
-/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/IMU.msg
-/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/Cartesian.msg
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/BmsState.msg
+/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/Cartesian.msg
+/home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/IMU.msg
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /home/zsl/adaptive_ws/src/unitree_legged_msgs/msg/MotorState.msg
 /home/zsl/adaptive_ws/devel/include/unitree_legged_msgs/HighState.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zsl/adaptive_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from unitree_legged_msgs/HighState.msg"

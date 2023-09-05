@@ -147,7 +147,7 @@ Go1Robot::Go1Robot(){
                            -0.3200, -0.3200, -0.3200, -0.3200;
 
 
-    _robVelLimitX << -0.5, 0.5;
+    _robVelLimitX << -1.0, 1.0;
     _robVelLimitY << -0.8, 0.8;
     _robVelLimitYaw << -2.0, 2.0;
 

@@ -68,39 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -125,6 +92,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -134,6 +112,28 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,274 +168,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule
+unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-unitree_servo: unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule
+gazebo_msgs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
 
-.PHONY : unitree_servo
+.PHONY : gazebo_msgs_generate_messages_eus
 
 # fast build rule for target.
-unitree_servo/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build.make unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build
-.PHONY : unitree_servo/fast
+gazebo_msgs_generate_messages_eus/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
+.PHONY : gazebo_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule
+unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-gazebo_ros_gencfg: unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule
+trajectory_msgs_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : gazebo_ros_gencfg
+.PHONY : trajectory_msgs_generate_messages_cpp
 
 # fast build rule for target.
-gazebo_ros_gencfg/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build
-.PHONY : gazebo_ros_gencfg/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_nodejs: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_srvs_generate_messages_nodejs
-
-# fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_eus
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_eus/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
-.PHONY : controller_manager_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_py: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_py
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_py/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
-.PHONY : controller_manager_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_py: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_nodejs: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_nodejs/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
-.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-.PHONY : std_srvs_generate_messages_eus
-
-# fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_lisp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_lisp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_cpp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_cpp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_lisp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
+trajectory_msgs_generate_messages_cpp/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
@@ -468,34 +228,139 @@ unitree_external_force/fast:
 .PHONY : unitree_external_force/fast
 
 # Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
+unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-gazebo_msgs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
+std_srvs_generate_messages_nodejs: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
-.PHONY : gazebo_msgs_generate_messages_eus
+.PHONY : std_srvs_generate_messages_nodejs
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_eus/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
-.PHONY : gazebo_msgs_generate_messages_eus/fast
+std_srvs_generate_messages_nodejs/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+std_srvs_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
-.PHONY : trajectory_msgs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
+std_srvs_generate_messages_lisp/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_eus
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_eus/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
+.PHONY : controller_manager_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_py: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_py
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_py/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
+.PHONY : controller_manager_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# fast build rule for target.
+std_srvs_generate_messages_eus/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_lisp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_lisp/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+# Convenience name for target.
+gazebo_ros_gencfg: unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_cpp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_cpp/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule
+
+# Convenience name for target.
+unitree_servo: unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/rule
+
+.PHONY : unitree_servo
+
+# fast build rule for target.
+unitree_servo/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build.make unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build
+.PHONY : unitree_servo/fast
 
 # Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/unitree_move_kinetic.dir/rule:
@@ -528,21 +393,6 @@ gazebo_msgs_generate_messages_lisp/fast:
 .PHONY : gazebo_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_eus
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_eus/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-.PHONY : trajectory_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 .PHONY : unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
@@ -556,6 +406,21 @@ gazebo_msgs_generate_messages_nodejs: unitree_ros/unitree_controller/CMakeFiles/
 gazebo_msgs_generate_messages_nodejs/fast:
 	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
 .PHONY : gazebo_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_eus: unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
@@ -573,6 +438,51 @@ trajectory_msgs_generate_messages_nodejs/fast:
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_lisp: unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_lisp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_lisp/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_nodejs: unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_nodejs/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
+.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
 	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 .PHONY : unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
@@ -588,21 +498,6 @@ trajectory_msgs_generate_messages_py/fast:
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-# Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
 	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
 .PHONY : unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
@@ -616,6 +511,21 @@ gazebo_msgs_generate_messages_py: unitree_ros/unitree_controller/CMakeFiles/gaze
 gazebo_msgs_generate_messages_py/fast:
 	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
 .PHONY : gazebo_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	cd /home/zsl/adaptive_ws/build && $(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
 unitree_ros/unitree_controller/CMakeFiles/unitree_controller.dir/rule:
@@ -747,43 +657,37 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... rebuild_cache"
-	@echo "... unitree_servo"
-	@echo "... gazebo_ros_gencfg"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... edit_cache"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... controller_manager_msgs_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... controller_manager_msgs_generate_messages_py"
-	@echo "... test"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... controller_manager_msgs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... controller_manager_msgs_generate_messages_lisp"
-	@echo "... install"
-	@echo "... controller_manager_msgs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... gazebo_msgs_generate_messages_cpp"
-	@echo "... unitree_external_force"
 	@echo "... gazebo_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... gazebo_msgs_generate_messages_cpp"
+	@echo "... unitree_external_force"
+	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... controller_manager_msgs_generate_messages_eus"
+	@echo "... controller_manager_msgs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... gazebo_ros_gencfg"
+	@echo "... install"
+	@echo "... controller_manager_msgs_generate_messages_cpp"
+	@echo "... unitree_servo"
 	@echo "... install/local"
 	@echo "... unitree_move_kinetic"
 	@echo "... gazebo_msgs_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... controller_manager_msgs_generate_messages_nodejs"
+	@echo "... test"
 	@echo "... list_install_components"
 	@echo "... trajectory_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... unitree_controller"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... src/body.o"
 	@echo "... src/body.i"
 	@echo "... src/body.s"

@@ -21,6 +21,7 @@ private:
     unitree_guide::publish_turning data_turning;// turning msgs
     //**********8.30**************
     ros::Publisher pub_rise;
+    ros::Subscriber sub_rise;
     unitree_guide::publish_rise data_rise;
     //**********8.30**************
 public:
@@ -37,7 +38,10 @@ public:
     // 发布位置误差，速度误差，复合误差e2，e2（0），积分项，miu_t的值，sgn的取值，miu_T/9.81;
     void pub_data_rise(Vec3 posError,Vec3 velError,Vec3 Error2,Vec3 Error2_0,Vec3 intergral,Vec3 miu_t,Vec3 templesgn,Vec3 templemiu);
     //回调函数
-    
+    //void sub_data_rise(double data1,double data2,double data3,double data4);
+
+    void chatterCallback(const unitree_guide::publish_rise& msg);
+    void sub_data_rise(double &data1,double &data2,double &data3,double &data4);
 
 
 };

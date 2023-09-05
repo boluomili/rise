@@ -31,7 +31,11 @@ struct publish_rise_
     , intergral()
     , miu_t()
     , templesgn()
-    , templemiu()  {
+    , templemiu()
+    , data1(0.0)
+    , data2(0.0)
+    , data3(0.0)
+    , data4(0.0)  {
       posError.assign(0.0);
 
       velError.assign(0.0);
@@ -56,7 +60,11 @@ struct publish_rise_
     , intergral()
     , miu_t()
     , templesgn()
-    , templemiu()  {
+    , templemiu()
+    , data1(0.0)
+    , data2(0.0)
+    , data3(0.0)
+    , data4(0.0)  {
   (void)_alloc;
       posError.assign(0.0);
 
@@ -101,6 +109,18 @@ struct publish_rise_
    typedef boost::array<double, 3>  _templemiu_type;
   _templemiu_type templemiu;
 
+   typedef double _data1_type;
+  _data1_type data1;
+
+   typedef double _data2_type;
+  _data2_type data2;
+
+   typedef double _data3_type;
+  _data3_type data3;
+
+   typedef double _data4_type;
+  _data4_type data4;
+
 
 
 
@@ -137,7 +157,11 @@ bool operator==(const ::unitree_guide::publish_rise_<ContainerAllocator1> & lhs,
     lhs.intergral == rhs.intergral &&
     lhs.miu_t == rhs.miu_t &&
     lhs.templesgn == rhs.templesgn &&
-    lhs.templemiu == rhs.templemiu;
+    lhs.templemiu == rhs.templemiu &&
+    lhs.data1 == rhs.data1 &&
+    lhs.data2 == rhs.data2 &&
+    lhs.data3 == rhs.data3 &&
+    lhs.data4 == rhs.data4;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -194,12 +218,12 @@ struct MD5Sum< ::unitree_guide::publish_rise_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "91a7fd43357753adc04df356b1455448";
+    return "4ce01dedb1e1719eddcff27609246b07";
   }
 
   static const char* value(const ::unitree_guide::publish_rise_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x91a7fd43357753adULL;
-  static const uint64_t static_value2 = 0xc04df356b1455448ULL;
+  static const uint64_t static_value1 = 0x4ce01dedb1e1719eULL;
+  static const uint64_t static_value2 = 0xddcff27609246b07ULL;
 };
 
 template<class ContainerAllocator>
@@ -226,6 +250,10 @@ struct Definition< ::unitree_guide::publish_rise_<ContainerAllocator> >
 "float64[3] miu_t\n"
 "float64[3] templesgn\n"
 "float64[3] templemiu\n"
+"float64    data1\n"
+"float64    data2\n"
+"float64    data3\n"
+"float64    data4\n"
 ;
   }
 
@@ -252,6 +280,10 @@ namespace serialization
       stream.next(m.miu_t);
       stream.next(m.templesgn);
       stream.next(m.templemiu);
+      stream.next(m.data1);
+      stream.next(m.data2);
+      stream.next(m.data3);
+      stream.next(m.data4);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -318,6 +350,14 @@ struct Printer< ::unitree_guide::publish_rise_<ContainerAllocator> >
       s << indent << "  templemiu[" << i << "]: ";
       Printer<double>::stream(s, indent + "  ", v.templemiu[i]);
     }
+    s << indent << "data1: ";
+    Printer<double>::stream(s, indent + "  ", v.data1);
+    s << indent << "data2: ";
+    Printer<double>::stream(s, indent + "  ", v.data2);
+    s << indent << "data3: ";
+    Printer<double>::stream(s, indent + "  ", v.data3);
+    s << indent << "data4: ";
+    Printer<double>::stream(s, indent + "  ", v.data4);
   }
 };
 

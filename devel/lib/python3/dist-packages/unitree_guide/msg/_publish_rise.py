@@ -8,7 +8,7 @@ import struct
 
 
 class publish_rise(genpy.Message):
-  _md5sum = "91a7fd43357753adc04df356b1455448"
+  _md5sum = "4ce01dedb1e1719eddcff27609246b07"
   _type = "unitree_guide/publish_rise"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64[3] posError
@@ -19,9 +19,13 @@ float64[3] intergral
 float64[3] miu_t
 float64[3] templesgn
 float64[3] templemiu
+float64    data1
+float64    data2
+float64    data3
+float64    data4
 """
-  __slots__ = ['posError','velError','Error2','Error2_0','intergral','miu_t','templesgn','templemiu']
-  _slot_types = ['float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64[3]']
+  __slots__ = ['posError','velError','Error2','Error2_0','intergral','miu_t','templesgn','templemiu','data1','data2','data3','data4']
+  _slot_types = ['float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64[3]','float64','float64','float64','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -31,7 +35,7 @@ float64[3] templemiu
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       posError,velError,Error2,Error2_0,intergral,miu_t,templesgn,templemiu
+       posError,velError,Error2,Error2_0,intergral,miu_t,templesgn,templemiu,data1,data2,data3,data4
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -56,6 +60,14 @@ float64[3] templemiu
         self.templesgn = [0.] * 3
       if self.templemiu is None:
         self.templemiu = [0.] * 3
+      if self.data1 is None:
+        self.data1 = 0.
+      if self.data2 is None:
+        self.data2 = 0.
+      if self.data3 is None:
+        self.data3 = 0.
+      if self.data4 is None:
+        self.data4 = 0.
     else:
       self.posError = [0.] * 3
       self.velError = [0.] * 3
@@ -65,6 +77,10 @@ float64[3] templemiu
       self.miu_t = [0.] * 3
       self.templesgn = [0.] * 3
       self.templemiu = [0.] * 3
+      self.data1 = 0.
+      self.data2 = 0.
+      self.data3 = 0.
+      self.data4 = 0.
 
   def _get_types(self):
     """
@@ -86,6 +102,8 @@ float64[3] templemiu
       buff.write(_get_struct_3d().pack(*self.miu_t))
       buff.write(_get_struct_3d().pack(*self.templesgn))
       buff.write(_get_struct_3d().pack(*self.templemiu))
+      _x = self
+      buff.write(_get_struct_4d().pack(_x.data1, _x.data2, _x.data3, _x.data4))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -122,6 +140,10 @@ float64[3] templemiu
       start = end
       end += 24
       self.templemiu = _get_struct_3d().unpack(str[start:end])
+      _x = self
+      start = end
+      end += 32
+      (_x.data1, _x.data2, _x.data3, _x.data4,) = _get_struct_4d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -142,6 +164,8 @@ float64[3] templemiu
       buff.write(self.miu_t.tostring())
       buff.write(self.templesgn.tostring())
       buff.write(self.templemiu.tostring())
+      _x = self
+      buff.write(_get_struct_4d().pack(_x.data1, _x.data2, _x.data3, _x.data4))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -179,6 +203,10 @@ float64[3] templemiu
       start = end
       end += 24
       self.templemiu = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=3)
+      _x = self
+      start = end
+      end += 32
+      (_x.data1, _x.data2, _x.data3, _x.data4,) = _get_struct_4d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -193,3 +221,9 @@ def _get_struct_3d():
     if _struct_3d is None:
         _struct_3d = struct.Struct("<3d")
     return _struct_3d
+_struct_4d = None
+def _get_struct_4d():
+    global _struct_4d
+    if _struct_4d is None:
+        _struct_4d = struct.Struct("<4d")
+    return _struct_4d

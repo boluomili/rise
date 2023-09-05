@@ -26,6 +26,10 @@ class publish_rise {
       this.miu_t = null;
       this.templesgn = null;
       this.templemiu = null;
+      this.data1 = null;
+      this.data2 = null;
+      this.data3 = null;
+      this.data4 = null;
     }
     else {
       if (initObj.hasOwnProperty('posError')) {
@@ -75,6 +79,30 @@ class publish_rise {
       }
       else {
         this.templemiu = new Array(3).fill(0);
+      }
+      if (initObj.hasOwnProperty('data1')) {
+        this.data1 = initObj.data1
+      }
+      else {
+        this.data1 = 0.0;
+      }
+      if (initObj.hasOwnProperty('data2')) {
+        this.data2 = initObj.data2
+      }
+      else {
+        this.data2 = 0.0;
+      }
+      if (initObj.hasOwnProperty('data3')) {
+        this.data3 = initObj.data3
+      }
+      else {
+        this.data3 = 0.0;
+      }
+      if (initObj.hasOwnProperty('data4')) {
+        this.data4 = initObj.data4
+      }
+      else {
+        this.data4 = 0.0;
       }
     }
   }
@@ -129,6 +157,14 @@ class publish_rise {
     }
     // Serialize message field [templemiu]
     bufferOffset = _arraySerializer.float64(obj.templemiu, buffer, bufferOffset, 3);
+    // Serialize message field [data1]
+    bufferOffset = _serializer.float64(obj.data1, buffer, bufferOffset);
+    // Serialize message field [data2]
+    bufferOffset = _serializer.float64(obj.data2, buffer, bufferOffset);
+    // Serialize message field [data3]
+    bufferOffset = _serializer.float64(obj.data3, buffer, bufferOffset);
+    // Serialize message field [data4]
+    bufferOffset = _serializer.float64(obj.data4, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -152,11 +188,19 @@ class publish_rise {
     data.templesgn = _arrayDeserializer.float64(buffer, bufferOffset, 3)
     // Deserialize message field [templemiu]
     data.templemiu = _arrayDeserializer.float64(buffer, bufferOffset, 3)
+    // Deserialize message field [data1]
+    data.data1 = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [data2]
+    data.data2 = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [data3]
+    data.data3 = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [data4]
+    data.data4 = _deserializer.float64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 192;
+    return 224;
   }
 
   static datatype() {
@@ -166,7 +210,7 @@ class publish_rise {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '91a7fd43357753adc04df356b1455448';
+    return '4ce01dedb1e1719eddcff27609246b07';
   }
 
   static messageDefinition() {
@@ -180,6 +224,10 @@ class publish_rise {
     float64[3] miu_t
     float64[3] templesgn
     float64[3] templemiu
+    float64    data1
+    float64    data2
+    float64    data3
+    float64    data4
     
     `;
   }
@@ -244,6 +292,34 @@ class publish_rise {
     }
     else {
       resolved.templemiu = new Array(3).fill(0)
+    }
+
+    if (msg.data1 !== undefined) {
+      resolved.data1 = msg.data1;
+    }
+    else {
+      resolved.data1 = 0.0
+    }
+
+    if (msg.data2 !== undefined) {
+      resolved.data2 = msg.data2;
+    }
+    else {
+      resolved.data2 = 0.0
+    }
+
+    if (msg.data3 !== undefined) {
+      resolved.data3 = msg.data3;
+    }
+    else {
+      resolved.data3 = 0.0
+    }
+
+    if (msg.data4 !== undefined) {
+      resolved.data4 = msg.data4;
+    }
+    else {
+      resolved.data4 = 0.0
     }
 
     return resolved;

@@ -883,6 +883,110 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_eus
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_eus
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_py
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_nodejs
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_nodejs
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_test_gencfg
+
+# Build rule for target.
+dynamic_reconfigure_test_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_test_gencfg
+.PHONY : dynamic_reconfigure_test_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_test_gencfg/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_test_gencfg.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_test_gencfg.dir/build
+.PHONY : dynamic_reconfigure_test_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_gencfg
+
+# Build rule for target.
+dynamic_reconfigure_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_gencfg
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_test
+
+# Build rule for target.
+dynamic_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_test
+.PHONY : dynamic_test
+
+# fast build rule for target.
+dynamic_test/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_test.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_test.dir/build
+.PHONY : dynamic_test/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	$(MAKE) -f dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make dynamic_reconfigure_test/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named unitree_legged_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1195,238 +1299,30 @@ unitree_motor_ctrl_node/fast:
 .PHONY : unitree_motor_ctrl_node/fast
 
 #=============================================================================
-# Target rules for targets named unitree_servo
+# Target rules for targets named gazebo_msgs_generate_messages_eus
 
 # Build rule for target.
-unitree_servo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 unitree_servo
-.PHONY : unitree_servo
+gazebo_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_eus
+.PHONY : gazebo_msgs_generate_messages_eus
 
 # fast build rule for target.
-unitree_servo/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build.make unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build
-.PHONY : unitree_servo/fast
+gazebo_msgs_generate_messages_eus/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
+.PHONY : gazebo_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named gazebo_ros_gencfg
+# Target rules for targets named trajectory_msgs_generate_messages_cpp
 
 # Build rule for target.
-gazebo_ros_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_gencfg
-.PHONY : gazebo_ros_gencfg
+trajectory_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_cpp
+.PHONY : trajectory_msgs_generate_messages_cpp
 
 # fast build rule for target.
-gazebo_ros_gencfg/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build
-.PHONY : gazebo_ros_gencfg/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_nodejs
-
-# Build rule for target.
-std_srvs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_nodejs
-.PHONY : std_srvs_generate_messages_nodejs
-
-# fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named controller_manager_msgs_generate_messages_eus
-
-# Build rule for target.
-controller_manager_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_eus
-.PHONY : controller_manager_msgs_generate_messages_eus
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_eus/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
-.PHONY : controller_manager_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_nodejs
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_nodejs
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named controller_manager_msgs_generate_messages_py
-
-# Build rule for target.
-controller_manager_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_py
-.PHONY : controller_manager_msgs_generate_messages_py
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_py/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
-.PHONY : controller_manager_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_py
-
-# Build rule for target.
-std_srvs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named controller_manager_msgs_generate_messages_nodejs
-
-# Build rule for target.
-controller_manager_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_nodejs
-.PHONY : controller_manager_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
-.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_eus
-
-# Build rule for target.
-std_srvs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_eus
-.PHONY : std_srvs_generate_messages_eus
-
-# fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named controller_manager_msgs_generate_messages_lisp
-
-# Build rule for target.
-controller_manager_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_lisp
-.PHONY : controller_manager_msgs_generate_messages_lisp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named controller_manager_msgs_generate_messages_cpp
-
-# Build rule for target.
-controller_manager_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_cpp
-.PHONY : controller_manager_msgs_generate_messages_cpp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_lisp
-
-# Build rule for target.
-std_srvs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_lisp
-
-# Build rule for target.
-trajectory_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_lisp
-.PHONY : trajectory_msgs_generate_messages_lisp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_py
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_py
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_eus
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_eus
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_gencfg
-
-# Build rule for target.
-dynamic_reconfigure_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_gencfg
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make unitree_ros/unitree_controller/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
+trajectory_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named gazebo_msgs_generate_messages_cpp
@@ -1455,30 +1351,121 @@ unitree_external_force/fast:
 .PHONY : unitree_external_force/fast
 
 #=============================================================================
-# Target rules for targets named gazebo_msgs_generate_messages_eus
+# Target rules for targets named std_srvs_generate_messages_nodejs
 
 # Build rule for target.
-gazebo_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_eus
-.PHONY : gazebo_msgs_generate_messages_eus
+std_srvs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_nodejs
+.PHONY : std_srvs_generate_messages_nodejs
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_eus/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
-.PHONY : gazebo_msgs_generate_messages_eus/fast
+std_srvs_generate_messages_nodejs/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_cpp
+# Target rules for targets named std_srvs_generate_messages_lisp
 
 # Build rule for target.
-trajectory_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_cpp
-.PHONY : trajectory_msgs_generate_messages_cpp
+std_srvs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
+std_srvs_generate_messages_lisp/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named controller_manager_msgs_generate_messages_eus
+
+# Build rule for target.
+controller_manager_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_eus
+.PHONY : controller_manager_msgs_generate_messages_eus
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_eus/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
+.PHONY : controller_manager_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named controller_manager_msgs_generate_messages_py
+
+# Build rule for target.
+controller_manager_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_py
+.PHONY : controller_manager_msgs_generate_messages_py
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_py/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
+.PHONY : controller_manager_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_eus
+
+# Build rule for target.
+std_srvs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_eus
+.PHONY : std_srvs_generate_messages_eus
+
+# fast build rule for target.
+std_srvs_generate_messages_eus/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named controller_manager_msgs_generate_messages_lisp
+
+# Build rule for target.
+controller_manager_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_lisp
+.PHONY : controller_manager_msgs_generate_messages_lisp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_ros_gencfg
+
+# Build rule for target.
+gazebo_ros_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_gencfg
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named controller_manager_msgs_generate_messages_cpp
+
+# Build rule for target.
+controller_manager_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_cpp
+.PHONY : controller_manager_msgs_generate_messages_cpp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named unitree_servo
+
+# Build rule for target.
+unitree_servo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitree_servo
+.PHONY : unitree_servo
+
+# fast build rule for target.
+unitree_servo/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build.make unitree_ros/unitree_controller/CMakeFiles/unitree_servo.dir/build
+.PHONY : unitree_servo/fast
 
 #=============================================================================
 # Target rules for targets named unitree_move_kinetic
@@ -1507,19 +1494,6 @@ gazebo_msgs_generate_messages_lisp/fast:
 .PHONY : gazebo_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_eus
-
-# Build rule for target.
-trajectory_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_eus
-.PHONY : trajectory_msgs_generate_messages_eus
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_eus/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-.PHONY : trajectory_msgs_generate_messages_eus/fast
-
-#=============================================================================
 # Target rules for targets named gazebo_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1531,6 +1505,19 @@ gazebo_msgs_generate_messages_nodejs: cmake_check_build_system
 gazebo_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
 .PHONY : gazebo_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_eus
+
+# Build rule for target.
+trajectory_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_eus
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_nodejs
@@ -1546,6 +1533,45 @@ trajectory_msgs_generate_messages_nodejs/fast:
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_lisp
+
+# Build rule for target.
+trajectory_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_lisp
+.PHONY : trajectory_msgs_generate_messages_lisp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_py
+
+# Build rule for target.
+std_srvs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named controller_manager_msgs_generate_messages_nodejs
+
+# Build rule for target.
+controller_manager_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller_manager_msgs_generate_messages_nodejs
+.PHONY : controller_manager_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
+.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1559,19 +1585,6 @@ trajectory_msgs_generate_messages_py/fast:
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named std_srvs_generate_messages_cpp
-
-# Build rule for target.
-std_srvs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named gazebo_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1583,6 +1596,19 @@ gazebo_msgs_generate_messages_py: cmake_check_build_system
 gazebo_msgs_generate_messages_py/fast:
 	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make unitree_ros/unitree_controller/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
 .PHONY : gazebo_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_cpp
+
+# Build rule for target.
+std_srvs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	$(MAKE) -f unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make unitree_ros/unitree_controller/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named unitree_controller
@@ -2068,6 +2094,14 @@ help:
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_test_gencfg"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_test"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... unitree_legged_msgs_generate_messages_py"
 	@echo "... unitree_legged_msgs_gennodejs"
 	@echo "... unitree_legged_msgs_generate_messages_nodejs"
@@ -2092,36 +2126,30 @@ help:
 	@echo "... _unitree_legged_msgs_generate_messages_check_deps_HighState"
 	@echo "... unitree_legged_control"
 	@echo "... unitree_motor_ctrl_node"
-	@echo "... unitree_servo"
-	@echo "... gazebo_ros_gencfg"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... controller_manager_msgs_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... controller_manager_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... controller_manager_msgs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... controller_manager_msgs_generate_messages_lisp"
-	@echo "... controller_manager_msgs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... gazebo_msgs_generate_messages_cpp"
-	@echo "... unitree_external_force"
 	@echo "... gazebo_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... gazebo_msgs_generate_messages_cpp"
+	@echo "... unitree_external_force"
+	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... controller_manager_msgs_generate_messages_eus"
+	@echo "... controller_manager_msgs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... gazebo_ros_gencfg"
+	@echo "... controller_manager_msgs_generate_messages_cpp"
+	@echo "... unitree_servo"
 	@echo "... unitree_move_kinetic"
 	@echo "... gazebo_msgs_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... controller_manager_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... unitree_controller"
 	@echo "... unitreeDrawForcePlugin"
 	@echo "... unitreeFootContactPlugin"

@@ -46,7 +46,27 @@
     :reader templemiu
     :initarg :templemiu
     :type (cl:vector cl:float)
-   :initform (cl:make-array 3 :element-type 'cl:float :initial-element 0.0)))
+   :initform (cl:make-array 3 :element-type 'cl:float :initial-element 0.0))
+   (data1
+    :reader data1
+    :initarg :data1
+    :type cl:float
+    :initform 0.0)
+   (data2
+    :reader data2
+    :initarg :data2
+    :type cl:float
+    :initform 0.0)
+   (data3
+    :reader data3
+    :initarg :data3
+    :type cl:float
+    :initform 0.0)
+   (data4
+    :reader data4
+    :initarg :data4
+    :type cl:float
+    :initform 0.0))
 )
 
 (cl:defclass publish_rise (<publish_rise>)
@@ -96,6 +116,26 @@
 (cl:defmethod templemiu-val ((m <publish_rise>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader unitree_guide-msg:templemiu-val is deprecated.  Use unitree_guide-msg:templemiu instead.")
   (templemiu m))
+
+(cl:ensure-generic-function 'data1-val :lambda-list '(m))
+(cl:defmethod data1-val ((m <publish_rise>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader unitree_guide-msg:data1-val is deprecated.  Use unitree_guide-msg:data1 instead.")
+  (data1 m))
+
+(cl:ensure-generic-function 'data2-val :lambda-list '(m))
+(cl:defmethod data2-val ((m <publish_rise>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader unitree_guide-msg:data2-val is deprecated.  Use unitree_guide-msg:data2 instead.")
+  (data2 m))
+
+(cl:ensure-generic-function 'data3-val :lambda-list '(m))
+(cl:defmethod data3-val ((m <publish_rise>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader unitree_guide-msg:data3-val is deprecated.  Use unitree_guide-msg:data3 instead.")
+  (data3 m))
+
+(cl:ensure-generic-function 'data4-val :lambda-list '(m))
+(cl:defmethod data4-val ((m <publish_rise>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader unitree_guide-msg:data4-val is deprecated.  Use unitree_guide-msg:data4 instead.")
+  (data4 m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <publish_rise>) ostream)
   "Serializes a message object of type '<publish_rise>"
   (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-double-float-bits ele)))
@@ -178,6 +218,42 @@
     (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
    (cl:slot-value msg 'templemiu))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'data1))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'data2))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'data3))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'data4))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <publish_rise>) istream)
   "Deserializes a message object of type '<publish_rise>"
@@ -285,6 +361,46 @@
       (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
     (cl:setf (cl:aref vals i) (roslisp-utils:decode-double-float-bits bits)))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'data1) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'data2) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'data3) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'data4) (roslisp-utils:decode-double-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<publish_rise>)))
@@ -295,16 +411,16 @@
   "unitree_guide/publish_rise")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<publish_rise>)))
   "Returns md5sum for a message object of type '<publish_rise>"
-  "91a7fd43357753adc04df356b1455448")
+  "4ce01dedb1e1719eddcff27609246b07")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'publish_rise)))
   "Returns md5sum for a message object of type 'publish_rise"
-  "91a7fd43357753adc04df356b1455448")
+  "4ce01dedb1e1719eddcff27609246b07")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<publish_rise>)))
   "Returns full string definition for message of type '<publish_rise>"
-  (cl:format cl:nil "float64[3] posError~%float64[3] velError~%float64[3] Error2~%float64[3] Error2_0~%float64[3] intergral~%float64[3] miu_t~%float64[3] templesgn~%float64[3] templemiu~%~%~%"))
+  (cl:format cl:nil "float64[3] posError~%float64[3] velError~%float64[3] Error2~%float64[3] Error2_0~%float64[3] intergral~%float64[3] miu_t~%float64[3] templesgn~%float64[3] templemiu~%float64    data1~%float64    data2~%float64    data3~%float64    data4~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'publish_rise)))
   "Returns full string definition for message of type 'publish_rise"
-  (cl:format cl:nil "float64[3] posError~%float64[3] velError~%float64[3] Error2~%float64[3] Error2_0~%float64[3] intergral~%float64[3] miu_t~%float64[3] templesgn~%float64[3] templemiu~%~%~%"))
+  (cl:format cl:nil "float64[3] posError~%float64[3] velError~%float64[3] Error2~%float64[3] Error2_0~%float64[3] intergral~%float64[3] miu_t~%float64[3] templesgn~%float64[3] templemiu~%float64    data1~%float64    data2~%float64    data3~%float64    data4~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <publish_rise>))
   (cl:+ 0
      0 (cl:reduce #'cl:+ (cl:slot-value msg 'posError) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
@@ -315,6 +431,10 @@
      0 (cl:reduce #'cl:+ (cl:slot-value msg 'miu_t) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
      0 (cl:reduce #'cl:+ (cl:slot-value msg 'templesgn) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
      0 (cl:reduce #'cl:+ (cl:slot-value msg 'templemiu) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
+     8
+     8
+     8
+     8
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <publish_rise>))
   "Converts a ROS message object to a list"
@@ -327,4 +447,8 @@
     (cl:cons ':miu_t (miu_t msg))
     (cl:cons ':templesgn (templesgn msg))
     (cl:cons ':templemiu (templemiu msg))
+    (cl:cons ':data1 (data1 msg))
+    (cl:cons ':data2 (data2 msg))
+    (cl:cons ':data3 (data3 msg))
+    (cl:cons ':data4 (data4 msg))
 ))

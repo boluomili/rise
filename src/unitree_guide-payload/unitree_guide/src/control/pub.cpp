@@ -1,4 +1,6 @@
 #include "control/pub.h"
+#include <ros/ros.h>
+#include "unitree_guide/publish_rise.h"
 
 Pub::Pub(){
     pub_mp = _nh.advertise<std_msgs::Float64>("/mp",1);
@@ -6,6 +8,7 @@ Pub::Pub(){
     pub_turning = _nh.advertise<unitree_guide::publish_turning>("/mdata_turning",20);
     //****************8.30**************
     pub_rise = _nh.advertise<unitree_guide::publish_rise>("/mdata_rise",20);
+    sub_rise=_nh.subscribe("chatter",1000,&Pub::chatterCallback,this);
     //pub_turning = _nh.advertise<unitree_guide::publish_turning>("/mdata_turning",20);
     //****************8.30**************
 }
@@ -69,3 +72,22 @@ void Pub::pub_data_rise(Vec3 posError,Vec3 velError,Vec3 Error2,Vec3 Error2_0,Ve
 }
 
 
+//订阅的回调函数，把发出的msg赋值到data_rise装住
+void Pub::chatterCallback(const unitree_guide::publish_rise & msg){
+                data_rise.data1=msg.data1;
+                data_rise.data2=msg.data2;
+                data_rise.data3=msg.data3;
+                data_rise.data4=msg.data4;
+
+
+
+    ROS_INFO("data1:%0.6f,data2:%0.6f,data3:%0.6f", msg.data1,msg.data2,msg.data3);
+}
+//将临时存储的data_rise赋值给K_s,beita,alphe2,alphe2。
+void Pub::sub_data_rise(double &data1,double &data2,double &data3,double &data4){
+        
+        data1=data_rise.data1;
+        data2=data_rise.data2;
+        data3=data_rise.data3;
+        data4=data_rise.data4;
+}

@@ -92,7 +92,7 @@ void BalanceCtrl::calVectorBd(Vec3 ddPcd, Vec3 dWbd, RotMat rotM, double _mp, Ve
     //_bd.head(3) = _mass * (ddPcd - _g) - abs(_mp) * _g ;
     // _bd.head(3) = (_mass + _mp/9.81) * ddPcd - _mass *_g + Vec3(0 , 0, _mp);
     _bd.head(3) = _mass * (ddPcd - _g) + Vec3(0 , 0, _mp)*9.81;  //？？？_mp是质量，但是前面乘出来是力相加在一起
-    // _bd.tail(3) = (rotM * _Ib * rotM.transpose()) * dWbd - _hatF;
+    //_bd.tail(3) = (rotM * _Ib * rotM.transpose()) * dWbd;
     _bd.tail(3) = _hatF;
     // std::cout<<"机器人转矩:"<<_bd.tail(3).transpose()<<std::endl;
     // std::cout<<"角加速度dWbd:"<<dWbd.transpose()<<std::endl;

@@ -5,6 +5,10 @@
 #include <iomanip>
 #include<dynamic_reconfigure/server.h>
 #include<unitree_guide/riseConfig.h>
+#include <iostream>
+#include <fstream>
+
+
 
 State_AcTest::State_AcTest(CtrlComponents *ctrlComp)
              :FSMState(ctrlComp, FSMStateName::ACTEST, "acTest"), 
@@ -71,7 +75,19 @@ State_AcTest::State_AcTest(CtrlComponents *ctrlComp)
 State_AcTest::~State_AcTest(){
     delete _gait;
 }
+//*************************
+// dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig> *dsrv_;
+// dsrv_ = new dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig>(ros::NodeHandle("~/" + name));
+// dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig>::CallbackType cb = boost::bind(&dynamic_reconfigure_test::reconfigureCB, this, _1, _2);
 
+// void GlobalPlanner::reconfigureCB(global_planner::GlobalPlannerConfig& config, uint32_t level) {
+//     K_s=config.K_s;
+//     _beita=config.beita;
+//     alphe1=config.alphe1;
+//     alphe2=config.alphe2;
+    
+// }
+//**********************************
 
 void State_AcTest::enter(){
     FILE *input1;
@@ -93,9 +109,9 @@ void State_AcTest::enter(){
 
 
     //***********8.29***************
-    K_s=1;
-    _beita=50;
-    alphe1=50;
+    K_s=0.5;
+    _beita=20;
+    alphe1=31.5;
     alphe2=20;
     //     extern dynamic_reconfigure::Server<dynamic_reconfigure_test::riseConfig> server;
     // //定义回调函数
@@ -387,6 +403,11 @@ void State_AcTest::calcTau(){
     std::cout<<"估计质量为miu_t= "<< (miu_t/9.81).transpose()<<std::endl;
     std::cout<<"临时sgn的值= "<<templesgn.transpose()<<std::endl;
     std::cout<<"K_s,beita,alphe1,alphe2的值: "<<K_s<<"**"<<_beita<<"**"<<alphe1<<"**"<<alphe2<<"**"<<std::endl;
+
+    std::cout<<"K_s= "<<K_s<<std::endl;
+    std::cout<<"_beita= "<<_beita<<std::endl;
+    std::cout<<"alphe1 = "<<alphe1<<std::endl;
+    std::cout<<"alphe2 = "<<alphe2<<std::endl;
     }
     count_1++;
     //***********8.29***************
@@ -465,8 +486,23 @@ void State_AcTest::calcTau(){
 
         FILE *input1;
         input1 = fopen("AC_DOB.txt","a");
-        fprintf(input1,"%f %f %f %f %f %f %f %f %f\n",_mb,_posBody(2),_pcd(2),_velBody(0),_vCmdGlobal(0), _velBody(1),_vCmdGlobal(1),_dYawCmd,_lowState->getGyroGlobal()(2));
+        fprintf(input1,"%f %f %f %f %f %f %f %f %f\n",miu_t(2)/9.81,_posBody(2),_pcd(2),_velBody(0),_vCmdGlobal(0), _velBody(1),_vCmdGlobal(1),_dYawCmd,_lowState->getGyroGlobal()(2));
         fclose(input1);
+      
+    //     _pub->sub_data_rise(K_s,_beita,alphe1,alphe2);
+    //     using namespace std;
+    //     ofstream dataFile;
+    // dataFile.open("dataFile.txt",ofstream::app);
+    // // 朝TXT文档中写入数据
+    // dataFile << "_posError:" << _posError(2) << "\t_velError:" << _velError(2)<< "\tmass:" << miu_t(2)/9.81<<"\t_posBody:" << _posBody(2)<<"\t_velBody:" << _velBody(2)<< "\n";
+    // // 关闭文档
+    // dataFile.close();
+        double mass_d=6.0;
+            FILE *input10;
+        input10 = fopen("dataFile10.txt","a");
+        fprintf(input10,"%f %f %f %f %f %f %f %f\n",mass_d,miu_t(2)/9.81,_pcd(2),_posBody(2),_vCmdGlobal(0),_velBody(0),_posError(2),_velError(0));
+        fclose(input10);
+
     }
  
     count++ ; 
